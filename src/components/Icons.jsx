@@ -1,5 +1,30 @@
 import React from "react"
 
+
+export const LogoutIcon = ({fill})=>{
+    return(
+        <svg width="18" height="18" viewBox="0 0 18 18" fill={fill || "#F1CECE99"} xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.67529 5.66993C6.90779 2.96993 8.29529 1.86743 11.3328 1.86743H11.4303C14.7828 1.86743 16.1253 3.20993 16.1253 6.56243V11.4524C16.1253 14.8049 14.7828 16.1474 11.4303 16.1474H11.3328C8.31779 16.1474 6.93029 15.0599 6.68279 12.4049" fill="#FCFCFD"/>
+        <path d="M6.67529 5.66993C6.90779 2.96993 8.29529 1.86743 11.3328 1.86743H11.4303C14.7828 1.86743 16.1253 3.20993 16.1253 6.56243V11.4524C16.1253 14.8049 14.7828 16.1474 11.4303 16.1474H11.3328C8.31779 16.1474 6.93029 15.0599 6.68279 12.4049" stroke="#EB5757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.25 9H2.71503" stroke="#EB5757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4.3875 6.48755L1.875 9.00005L4.3875 11.5125" fill="none"/>
+        <path d="M4.3875 6.48755L1.875 9.00005L4.3875 11.5125" stroke="#EB5757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    )
+}
+
+export const CollapseIcon = ({fill})=>{
+    return(
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 96 960 960" width="20" fill={fill || "var(--grey-lighter)"}><path d="M663 712V440L527 576l136 136ZM180 936q-24.75 0-42.375-17.625T120 876V276q0-24.75 17.625-42.375T180 216h600q24.75 0 42.375 17.625T840 276v600q0 24.75-17.625 42.375T780 936H180Zm147-60V276H180v600h147Zm60 0h393V276H387v600Zm-60 0H180h147Z"/>
+        </svg>
+    )
+}
+export const CollapseOpen = ({fill})=>{
+    return(
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 96 960 960" width="20" fill={fill || "var(--grey-lighter)"}><path d="M527 440v272l136-136-136-136ZM180 936q-24.75 0-42.375-17.625T120 876V276q0-24.75 17.625-42.375T180 216h600q24.75 0 42.375 17.625T840 276v600q0 24.75-17.625 42.375T780 936H180Zm147-60V276H180v600h147Zm60 0h393V276H387v600Zm-60 0H180h147Z"/></svg>
+    )
+}
+
 export const Logo = ()=>{
     return(
         <svg width="160" height="39" viewBox="0 0 160 39" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,7 +103,7 @@ export const CloseIcon = ()=>{
     )
 }
 
-export const SearchIcon = ()=>{
+export const SearchIcon = ({className})=>{
     return(
         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M20.1667 20.1667L18.3333 18.3334M10.5417 19.25C15.3511 19.25 19.25 15.3512 19.25 10.5417C19.25 5.73222 15.3511 1.83337 10.5417 1.83337C5.73218 1.83337 1.83333 5.73222 1.83333 10.5417C1.83333 15.3512 5.73218 19.25 10.5417 19.25Z" stroke="#A5B4CB" strokeWidth="1.5" />
@@ -117,6 +142,13 @@ export const ProfileImg = ()=>{
    
     </defs>
     </svg>
+    )
+}
+export const PatientIcon = ({fill})=>{
+    return(
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10.0003 12.5001C13.4 12.5001 16.2053 15.0448 16.6154 18.3334H3.38525C3.79532 15.0448 6.60065 12.5001 10.0003 12.5001ZM8.48942 14.3997C7.29473 14.7784 6.28848 15.5945 5.66818 16.6667H10.0003L8.48942 14.3997ZM11.5116 14.3998L10.0003 16.6667H14.3325C13.7123 15.5947 12.7062 14.7786 11.5116 14.3998ZM15.0003 1.66675V6.66675C15.0003 9.42816 12.7618 11.6667 10.0003 11.6667C7.23892 11.6667 5.00035 9.42816 5.00035 6.66675V1.66675H15.0003ZM6.66701 6.66675C6.66701 8.50766 8.1594 10.0001 10.0003 10.0001C11.8413 10.0001 13.3337 8.50766 13.3337 6.66675H6.66701ZM13.3337 3.33341H6.66701L6.66692 5.00008H13.3336L13.3337 3.33341Z" fill="#34A3A4"/>
+      </svg>
     )
 }
 export const Patient = ({fill})=>{

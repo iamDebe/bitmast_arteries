@@ -21,7 +21,9 @@ const TopBar = ({barTitle, greetings}) => {
                 borderradius="none"
                 
                 />
-              <NotificationIcon />
+                <div className='icon'>
+                  <NotificationIcon />
+                </div>
               <div className='img-wrapper'>
                 <img src="assets/images/profile-img.svg" alt="img" />
               </div>
@@ -47,6 +49,10 @@ const Wrapper = styled.div`
   justify-content: space-between;
   align-items:center;
   gap: 1.5rem;
+
+  .img-wrapper, .icon{
+    cursor:pointer;
+  }
 `;
 
 const Container = styled.div`

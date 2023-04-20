@@ -2,48 +2,25 @@
 import React from "react";
 import styled from "styled-components";
 import { Line } from "react-chartjs-2";
-import { Chart as ChartJS, LineElement, CategoryScale, LinearScale, PointElement, Legend, Tooltip } from "chart.js";
-import InputField from "./forms/InputField";
+import { Chart as 
+  ChartJS, 
+  LineElement, 
+  CategoryScale, 
+  LinearScale, 
+  PointElement, 
+  Legend, 
+  Tooltip } from "chart.js";
 import SelectField from "./forms/SelectField";
 
-
-
  ChartJS.register(
-              LineElement,
-              CategoryScale,
-              LinearScale,
-              PointElement,
-              Legend,
-              Tooltip
-          )
+  LineElement,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  Legend,
+  Tooltip
+)
 
-
-//  const employeeData = [
-//   {
-//       id: 1,
-//       year: 2016,
-//       userGain: 60,
-//       userLost: 823
-//   },
-//   {
-//       id: 2,
-//       year: 2017,
-//       userGain: 20,
-//       userLost: 825
-//   },
-//   {
-//       id: 3,
-//       year: 2018,
-//       userGain: 15,
-//       userLost: 826
-//   },
-//   {
-//       id: 4,
-//       year: 2019,
-//       userGain: 10,
-//       userLost: 823
-//   }
-// ]
 const LineChart = () => {
   const data = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -99,7 +76,7 @@ const LineChart = () => {
     }
   }
   
-
+  const years = ["2022", "2021", "2020", "2019", "2018"]
  
     return ( 
         <Wrapper> 
@@ -113,6 +90,9 @@ const LineChart = () => {
                     padding="0.5rem 1rem "
                   >
                     <option value="" selected disabled>This Year</option>
+                    {years.map((year, index)=>{
+                       return <option value="" key={index}>{year}</option>
+                    })}
                   </SelectField>
                 </DatePickerWrapper>
             </div>

@@ -1,17 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const selectFieldStyles = `
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin-bottom: 1.75rem;
   position: relative;
-  width: 100%;
-  margin:  ${props=> props.margin || ""};
-
+  margin-bottom: var(--selectfield-margin-bottom);
+  width: var(--selectfield-width);
   label {
-    font-size: 12px;
-    line-height: 15px;
     color: var(--grey-400);
   }
   select {
@@ -19,21 +17,17 @@ export const Wrapper = styled.div`
     color: var(--grey-300);
     font-family: inherit;
     font-size: 12px;
-    padding: ${props=> props.padding || "0.5rem 2rem 0.5rem 1rem"};
-    margin:  ${props=> props.margin || ""};
-
-    border: 0.5px solid var(--grey-lighter);
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    border: 0.5px solid var(--grey-light);
     border-radius: 2px;
     width: inherit;
     outline: none;
-    cursor: pointer;
     &::placeholder {
       font-family: inherit;
       color: var(--grey-300);
     }
     &:focus {
       background: var(--grey-100);
-      border: 1px solid var(--grey-lighter);
       color: var(--grey-400);
     }
   }
@@ -49,12 +43,22 @@ export const Wrapper = styled.div`
   }
 `;
 
-const SelectField = ({ margin, padding, label, ...props }) => {
-  return (
-    <Wrapper margin={margin} padding={padding}>
-      <label htmlFor={props.id || props.name}>{label}</label>
+const SelectField = ({ label, width, padding, marginbottom, className, ...props }) => {
+  const customStyles = `
+    --selectfield-margin-bottom: ${marginbottom || "1.75rem"};
+    --selectfield-width: ${width || "100%"};
+    --selectfield-padding: ${padding || "0.5rem 2rem 0.5rem 1rem"};
+  `;
 
-      <select className="text-input" {...props} margin={margin} padding={padding}/>
+  const Wrapper = styled("div")`
+    ${selectFieldStyles}
+    ${customStyles}
+  `;
+
+  return (
+    <Wrapper className={className}>
+      <label className="type-body3" htmlFor={props.id || props.name}>{label}</label>
+      <select className="text-input" {...props} />
     </Wrapper>
   );
 };

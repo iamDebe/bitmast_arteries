@@ -40,8 +40,8 @@ const customStyles = {
     },
     headCells: {
         style: {
-            paddingLeft: '8px', // override the cell padding for head cells
-            paddingRight: '8px',
+            padding: '.2rem 1rem',
+            backgroundColor: "var(--blue-lightest)"
         },
     },
     cells: {
@@ -82,7 +82,7 @@ const data = [
 
 
 
-const Table = ({width, className, customStyles}) => {
+const Table = ({width, className}) => {
   return (
     <DataTable
         columns={columns}

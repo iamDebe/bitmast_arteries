@@ -2,7 +2,7 @@ import React from 'react';
 import EssLayout from '../components/EssLayouts';
 import styled from 'styled-components';
 import TotalBox from '../components/TotalBox';
-import {ClaimIcon, RevenueIcon, TreatmentIcon, Patient} from "../components/Icons";
+import {ClaimIcon, RevenueIcon, TreatmentIcon, PatientIcon} from "../components/Icons";
 import LineChart from '../components/LineChart';
 import DoughnutChart from '../components/DoughnutChart';
 import Claims from '../components/Claims';
@@ -19,7 +19,7 @@ const Overview = () => {
             />
             <TotalWrapper>
               <TotalBox 
-                icon={<Patient />}
+                icon={<PatientIcon />}
                 totalTitle="Total Patient"
                 totalValue="00000"
               />

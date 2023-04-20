@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 import React from 'react';
-import { GlobalStyles } from '../globalStyles';
 
-const TotalBox = ({icon, totalTitle, totalValue, borderLeft}) => {
+const TotalBox = ({icon, totalTitle, totalValue, borderLeft, borderRadius}) => {
   return (
 
     <Wrapper borderLeft={borderLeft}>
-      <div className='details ' >
-          <div className='icon'>
+      <div className='details'  >
+          <div className='icon' borderRadius={borderRadius}>
             <div>{icon}</div>
           </div>
           <div className='details-text'>
@@ -41,7 +40,7 @@ const Wrapper = styled.div`
         width: 40px;
         height: 40px;
         background: var(--blue-lightest);
-        border-radius: .3rem;
+        border-radius: ${props => props.borderRadius || ".3rem"};
         padding: .7rem;
       }
   }

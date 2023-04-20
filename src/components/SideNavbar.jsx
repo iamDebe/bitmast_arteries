@@ -3,7 +3,18 @@ import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { mobile } from "../globalStyles";
 
-import { Logo, DashboardIcon, DashboardIconWhite, Patient, CatalogueICon, Claim, BillingIcon, SettingsIcon, CloseIcon } from "./Icons";
+import { Logo, 
+  DashboardIcon, 
+  Patient, 
+  CatalogueICon, 
+  Claim, 
+  BillingIcon, 
+  SettingsIcon, 
+  CloseIcon, 
+  CollapseIcon,
+  CollapseOpen,
+  LogoutIcon
+} from "./Icons";
 
 
 
@@ -38,6 +49,8 @@ const Navbar = styled.div`
     transform: translateX(0);
     transition: transform 0.8s ease-in;
   }
+
+ 
   ${mobile} {
     display: none;
   }
@@ -61,7 +74,7 @@ const NavWrapper = styled.div`
     white-space: nowrap;
     min-height: 42px;
     svg {
-      fill: var(--grey);
+      fill: var(--grey-lighter);
     }
     &:hover,
     &.active {
@@ -109,12 +122,37 @@ const CollapseButton = styled.div`
   border-radius: var(--br);
   font-family: inherit;
   color: var(--grey-400);
+
+  &:hover,
+    &.active {
+      background: #34A3A4;
+      color: #ffffff;
+      svg {
+        fill: var(--white);
+      }
+    }
   &.close-btn {
     justify-content: center;
     height: 2.625rem;
     width: 2.625rem;
     border-radius: 50%;
+    
   }
+`;
+
+const LogoutWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  padding: 0.75rem;
+  width: 100%;
+  background: #F1CECE99;
+  color: var(--red-main);
+  margin-top: 1rem;
+  border-radius: .2rem;
+
+
 `;
 
 const navItems = [
@@ -148,6 +186,7 @@ const navItems = [
     icon: <SettingsIcon fill=""/>,
     title: "Settings",
   },
+ 
 ];
 
 const SideNavbar = ({ collapsed, onToggleCollapse, isOpen, closeSidebar }) => {
@@ -187,14 +226,19 @@ const SideNavbar = ({ collapsed, onToggleCollapse, isOpen, closeSidebar }) => {
             </CollapseButton>
           ) : (
             <CollapseButton onClick={onToggleCollapse}>
-              <div className="icon">
-                {/* <DashboardIcon  fill=""/> */}
-                <b>X</b>
+               <div className="icon">
+               {collapsed ?   <CollapseOpen />: <CollapseIcon />}
+              
               </div>
-              {!collapsed && <span>Collapse</span>}
+              {!collapsed && <span className="type-title7  collapse-text">Collapse</span>}
             </CollapseButton>
           )}
+          <LogoutWrapper>
+            <LogoutIcon fill="" />
+            <p className="logout">Logout</p>
+          </LogoutWrapper>
         </div>
+      
     </Navbar>
   );
 };

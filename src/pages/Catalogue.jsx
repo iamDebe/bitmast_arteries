@@ -25,36 +25,42 @@ const Catalogue = () => {
                     totalTitle="Physiotherapy"
                     borderLeft="none"
                     totalValue="00000"
+                    borderRadius="50px"
                 />
                 <TotalBox 
                     icon={<DashboardIcon />}
                     totalTitle="Physiotherapy"
                     borderLeft="none"
                     totalValue="00000"
+                    borderRadius="50px"
                 />
                 <TotalBox 
                     icon={<DashboardIcon />}
                     totalTitle="Physiotherapy"
                     borderLeft="none"
                     totalValue="00000"
+                    borderRadius="50px"
                 />
                 <TotalBox 
                     icon={<DashboardIcon />}
                     totalTitle="Physiotherapy"
                     borderLeft="none"
                     totalValue="00000"
+                    borderRadius="50px"
                 />
                 <TotalBox 
                     icon={<DashboardIcon />}
                     totalTitle="Physiotherapy"
                     borderLeft="none"
                     totalValue="00000"
+                    borderRadius="50px"
                 />
                 <TotalBox 
                     icon={<DashboardIcon />}
                     totalTitle="Physiotherapy"
                     borderLeft="none"
                     totalValue="00000"
+                    borderRadius="50px"
                 />
                 <TotalBox 
                     icon={<DashboardIcon />}
